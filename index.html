@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mayuri Studio & Cybercafe — Dhantala</title>
+  <meta name="description" content="Mayuri Studio & Cybercafe in Dhantala — photography, SBI Life assistance, Gramin Bank CSP services, and more." />
+  <meta property="og:title" content="Mayuri Studio & Cybercafe" />
+  <meta property="og:description" content="Photography studio and cybercafe in Dhantala. Banking CSP & insurance assistance available." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220;          /* deep navy */
+      --card:#0f172a;        /* slate */
+      --muted:#94a3b8;       /* slate-400 */
+      --text:#e2e8f0;        /* slate-200 */
+      --brand:#0ea5e9;       /* sky-500 */
+      --accent:#22d3ee;      /* cyan-400 */
+      --ring:rgba(14,165,233,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(1200px 800px at 80% -10%, rgba(34,211,238,.15), transparent 60%),radial-gradient(900px 600px at -10% 20%, rgba(14,165,233,.2), transparent 50%),var(--bg);color:var(--text);}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1200px,92%);margin-inline:auto}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--brand),var(--accent));color:#00111a;padding:.85rem 1.1rem;border-radius:12px;font-weight:700;border:0;cursor:pointer;box-shadow:0 10px 24px rgba(14,165,233,.25);transition:transform .15s ease, filter .15s ease}
+    .btn:hover{transform:translateY(-1px);filter:saturate(1.1)}
+    .btn.ghost{background:rgba(148,163,184,.1);color:var(--text);box-shadow:none;border:1px solid rgba(148,163,184,.2)}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.75);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid rgba(148,163,184,.15)}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .brand-logo{width:42px;height:42px;border-radius:12px;border:1px solid rgba(148,163,184,.2);background:linear-gradient(135deg,rgba(34,211,238,.2),rgba(14,165,233,.1));display:grid;place-items:center;font-weight:800;color:var(--accent)}
+    .brand-name{font-size:1.05rem;font-weight:800;letter-spacing:.2px}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{padding:.55rem .8rem;border-radius:10px;border:1px solid transparent}
+    .nav-links a:hover{background:rgba(148,163,184,.08);border-color:rgba(148,163,184,.15)}
+    .menu-btn{display:none}
+
+    /* HERO */
+    .hero{padding:5rem 0 3rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
+    .eyebrow{display:inline-flex;gap:.5rem;align-items:center;background:rgba(148,163,184,.12);color:#bae6fd;font-weight:700;border:1px solid rgba(148,163,184,.2);border-radius:999px;padding:.4rem .7rem .4rem .4rem}
+    .pulse{width:8px;height:8px;border-radius:999px;background:#22d3ee;box-shadow:0 0 0 8px rgba(34,211,238,.25)}
+    h1{font-size:clamp(2rem,3.5vw,3.2rem);line-height:1.07;margin:.8rem 0 1rem;font-weight:800}
+    .lead{color:var(--muted);font-size:1.05rem;line-height:1.75}
+    .hero-card{background:linear-gradient(180deg,rgba(14,165,233,.15),rgba(14,165,233,.05));border:1px solid rgba(148,163,184,.2);border-radius:var(--radius);padding:1rem;display:grid;gap:1rem}
+    .hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+    .hero-grid .tile{border:1px solid rgba(148,163,184,.2);background:rgba(148,163,184,.06);border-radius:16px;padding:1rem;min-height:120px;display:flex;flex-direction:column;justify-content:space-between}
+    .tile h4{margin:0;font-size:.95rem}
+    .tile p{margin:0;color:var(--muted);font-size:.9rem}
+
+    /* SECTIONS */
+    section{padding:4rem 0;border-top:1px solid rgba(148,163,184,.12)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:1.2rem}
+    .kicker{letter-spacing:.12em;color:#7dd3fc;font-weight:800;font-size:.8rem}
+    h2{margin:.35rem 0 0;font-size:clamp(1.4rem,2.4vw,2rem)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{background:rgba(15,23,42,.6);border:1px solid rgba(148,163,184,.15);border-radius:var(--radius);padding:1.1rem}
+    .card h3{margin-top:.3rem}
+    .muted{color:var(--muted)}
+
+    /* GALLERY */
+    .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:.6rem}
+    .gallery img{aspect-ratio:1/1;object-fit:cover;border-radius:14px;border:1px solid rgba(148,163,184,.15)}
+
+    /* LOCATION */
+    .loc-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:1rem}
+    .map{border:0;width:100%;height:360px;border-radius:16px;filter:saturate(1.1) contrast(1.05)}
+
+    /* CONTACT */
+    form{display:grid;gap:.8rem}
+    input,textarea{width:100%;padding:.9rem 1rem;border-radius:12px;border:1px solid rgba(148,163,184,.25);background:rgba(2,6,23,.4);color:var(--text);outline:0}
+    input:focus,textarea:focus{box-shadow:0 0 0 4px var(--ring);border-color:var(--brand)}
+    textarea{min-height:120px}
+
+    /* FOOTER */
+    footer{padding:2.2rem 0;color:var(--muted)}
+    .foot{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;border-top:1px solid rgba(148,163,184,.12);padding-top:1.2rem}
+
+    /* UTIL */
+    .hide{display:none}
+
+    /* RESPONSIVE */
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr;gap:1.6rem}
+      .hero-grid{grid-template-columns:repeat(2,1fr)}
+      .loc-wrap{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+    }
+    @media (max-width: 760px){
+      .nav-links{display:none}
+      .menu-btn{display:inline-flex}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="Mayuri Studio home">
+        <div class="brand-logo">MS</div>
+        <div class="brand-name">Mayuri Studio & Cybercafe</div>
+      </a>
+      <div class="nav-links" role="navigation" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="menu-btn btn ghost" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+    </div>
+    <div id="mobileMenu" class="hide" aria-hidden="true" style="border-top:1px solid rgba(148,163,184,.15)">
+      <div class="container" style="display:grid;gap:.2rem;padding:.7rem 0 1rem">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="container hero" id="top">
+    <div>
+      <span class="eyebrow"><span class="pulse"></span> Welcome to Dhantala's creative hub</span>
+      <h1>Mayuri Studio & Cybercafe</h1>
+      <p class="lead">Professional photography, reliable cybercafe services, and assistance with <strong>SBI Life</strong> and <strong>West Bengal Gramin Bank CSP</strong> — all under one roof. We help you secure your future and capture your best moments.</p>
+      <div style="display:flex;gap:.7rem;margin-top:1rem">
+        <a class="btn" href="#contact">Book an appointment</a>
+        <a class="btn ghost" href="#services">Explore services</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-grid">
+        <div class="tile">
+          <h4>Studio Portraits</h4>
+          <p>Passport, portrait, and event shoots with pro lighting.</p>
+        </div>
+        <div class="tile">
+          <h4>Cybercafe</h4>
+          <p>Print, scan, online forms, and fast internet access.</p>
+        </div>
+        <div class="tile">
+          <h4>Banking CSP</h4>
+          <p>Gramin Bank CSP support for nearby households.</p>
+        </div>
+        <div class="tile">
+          <h4>SBI Life Help</h4>
+          <p>Guidance on policies and claims.</p>
+        </div>
+        <div class="tile">
+          <h4>Photo Printing</h4>
+          <p>High‑quality prints and albums.</p>
+        </div>
+        <div class="tile">
+          <h4>Events</h4>
+          <p>Weddings, ceremonies, and corporate coverage.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">About</div>
+          <h2>Jyotirmoy Sannyasi</h2>
+        </div>
+      </div>
+      <div class="card">
+        <p class="muted">I’m a community‑focused entrepreneur from Dhantala. Along with running Mayuri Studio, I work with SBI Life to help families plan securely, and I operate a Gramin Bank Customer Service Point to bring essential banking closer to local residents. Photography is my creative outlet — I love preserving moments with care and craft.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">What we do</div>
+          <h2>Services at a glance</h2>
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Photography Studio</h3>
+          <p class="muted">Passports, portraits, product shoots, and event coverage with professional lighting and editing.</p>
+        </div>
+        <div class="card">
+          <h3>Cybercafe</h3>
+          <p class="muted">Printing, scanning, laminating, online form fill‑ups, Aadhaar/ PAN/ Vote/ Reson/ cast certificate related assistance, and email services.</p>
+        </div>
+        <div class="card">
+          <h3>Banking CSP</h3>
+          <p class="muted">Gramin Bank Customer Service Point for cash deposit/withdrawal, balance enquiry, account opening help, and more.</p>
+        </div>
+        <div class="card">
+          <h3>SBI Life Support</h3>
+          <p class="muted">Policy guidance, premium reminders, basic claim support, and documentation assistance.</p>
+        </div>
+        <div class="card">
+          <h3>Design & Print</h3>
+          <p class="muted">Photo printing, album design, ID cards(PVC id card;available), and banners with crisp outputs.</p>
+        </div>
+        <div class="card">
+          <h3>On‑site Shoots</h3>
+          <p class="muted">Not available now</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Work</div>
+          <h2>Gallery</h2>
+        </div>
+        <a class="btn ghost" href="#contact">Request full portfolio</a>
+      </div>
+      <div class="gallery" aria-label="Sample photos">
+        <!-- Replace src with your image links -->
+        <img src="01.jpg" alt="Sample photo 1">
+        <img src="02.jpg" alt="Sample photo 2">
+        <img src="03.jpg" alt="Sample photo 3">
+        <img src="04.jpg" alt="Sample photo 4">
+        <img src="w3.jpeg" alt="Sample photo 5">
+        <img src="06.jpg" alt="Sample photo 6">
+        <img src="07.jpg" alt="Sample photo 7">
+        <img src="wh1.jpg" alt="Sample photo 8">
+        <img src="8.jpg" alt="Sample photo 9">
+        <img src="9.jpg" alt="Sample photo 10">
+        <img src="10.jpg" alt="Sample photo 11">
+        <img src="11.jpg" alt="Sample photo 12">
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Visit us</div>
+          <h2>Location & Hours</h2>
+        </div>
+      </div>
+      <div class="loc-wrap">
+        <div class="card">
+          <p><strong>Address:</strong> 5JRJ+GC Dhantala, West Bengal, India</p>
+          <p><strong>Open:</strong> 10:00 AM – 10:00 PM (Mon–Sun)</p>
+          <p><strong>Phone:</strong> <a href="tel:+919635864918">+91 9635864918</a></p>
+          <p><strong>Email:</strong> <a href="jsdhantala@gmail.com">hello@mayuristudio.example</a></p>
+          <div style="display:flex;gap:.6rem;margin-top:.6rem">
+            <a class="btn" href="#contact">Get in touch</a>
+            <a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/place//@23.194021,88.6253418,887m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D">Open in Google Maps</a>
+          </div>
+        </div>
+        <iframe class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d976.7229335317247!2d88.62437844056842!3d23.194301042136807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1755593633509!5m2!1sen!2sin"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Milestones</div>
+          <h2>Achievements</h2>
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Area Level LM Meet</h3>
+          <p class="muted">Recognition at Kolkata Nicco Park with SBI Life (add year/details).</p>
+        </div>
+        <div class="card">
+          <h3>Customer Love</h3>
+          <p class="muted">Hundreds of satisfied clients for portraits and events.</p>
+        </div>
+        <div class="card">
+          <h3>Community Service</h3>
+          <p class="muted">Active support through Banking CSP for local households.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Say hello</div>
+          <h2>Contact</h2>
+        </div>
+      </div>
+      <div class="grid-3">
+
+        <div class="card">
+          <h3>Quick links</h3>
+          <p class="muted">For bookings and urgent requests, call or WhatsApp.</p>
+          <p><a class="btn ghost" href="tel:+919635864918">Call now</a></p>
+          <p><a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/919635864918">WhatsApp</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot">
+      <p>© <span id="year"></span> Mayuri Studio & Cybercafe — Dhantala</p>
+      <p>Built with ❤️ for the community</p>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hide');
+      mobileMenu.setAttribute('aria-hidden', String(expanded));
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        const el = document.querySelector(href);
+        if (el){
+          e.preventDefault();
+          el.scrollIntoView({behavior:'smooth', block:'start'});
+          // close mobile menu on navigate
+          if(!mobileMenu.classList.contains('hide')){
+            mobileMenu.classList.add('hide');
+            menuBtn.setAttribute('aria-expanded','false');
+            mobileMenu.setAttribute('aria-hidden','true');
+          }
+        }
+      })
+    })
+  </script>
+</body>
+</html>
